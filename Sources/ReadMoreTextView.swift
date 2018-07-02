@@ -289,12 +289,12 @@ public class ReadMoreTextView: UITextView {
         if let cachedIntrinsicContentHeight = cachedIntrinsicContentHeight {
             if intrinsicContentHeight != cachedIntrinsicContentHeight {
                 self.cachedIntrinsicContentHeight = intrinsicContentHeight
-                onSizeChange(self)
             }
         } else {
             self.cachedIntrinsicContentHeight = intrinsicContentHeight
-            onSizeChange(self)
         }
+        
+        onSizeChange(self)
     }
     
     private func rangeToReplaceWithReadMoreText() -> NSRange {
